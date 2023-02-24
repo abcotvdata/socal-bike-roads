@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flood Risk Map</title>
+
+	<!-- viewport for responsive -->	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<!-- CSS stylesheets -->	
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/jqueryui.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.typekit.net/fyj8twa.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  </head>
+  <body>
+
+    <div class="maptitle">
+
+      <div class="headline">
+        <h1>Most dangerous roads for bicyclists</h1>
+        <div class="bike-icon">
+          <img src="img/bike-w.png">
+        </div>
+      </div>
+      
+      <h3>This map shows <a href="https://transportation-safety-scag.hub.arcgis.com/pages/high-injury-network" target="_Blank">High Injury Networks</a> for bicyclists, which are roadways with the highest concentration of serious bike crashes. More than 80% are in disadvantaged communities.</h3>
+
+      <button class="button" id="searchagain">Search for a zip code</button>
+
+      <div class="overlay">
+        <div class="searcharea">
+
+          <input type="text" name="zip" id="zip" placeholder="Zip/postal code">
+          <button class="button" id="submit">SUBMIT</button><button class="button" id="justexplore">JUST EXPLORE THE MAP</button>
+
+        </div>
+      </div>
+
+    </div>
+
+    
+
+    <div class="tryagain">
+
+      <div class="tryagaintext">
+
+        <h2>Error!</h2>
+        <p>Please type a valid zip code</p>
+
+        <button class="button" id="oktryagain">OK</button>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="legend">
+      <div class="innerlegend">
+
+        <div class="footer">
+          <p>Source: <a href="https://transportation-safety-scag.hub.arcgis.com/pages/high-injury-network" target="_Blank" > SCAG Regional High Injury Network</a></p>
+        </div>
+        
+      </div>
+    </div><!--  end legend -->
+
+
+
+    <div class="background">
+      <!-- <img src="img/Background.png"> -->
+
+      <div id="map"></div>
+
+      <!-- <div class="shade">
+        <img src="img/Shade.png">
+      </div> -->
+      
+    </div>
+
+    <!-- <div class="footer">
+      <p>Source: <a href="https://floodlab.eng.uci.edu/" target="_Blank" > UCI Flood Lab</a></p>
+    </div> -->
+
+
+   
+
+
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+	<script src="js/jquery.js"></script>
+  <script src="js/jqueryui.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+<!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.0.4"></script>
+
+<!-- plugins to load tif files-->
+  <!-- <script src="https://unpkg.com/proj4"></script>
+  <script src="https://unpkg.com/georaster"></script>
+  <script src="https://unpkg.com/georaster-layer-for-leaflet"></script> -->
+
+<!-- geojson -->
+ <!--  <script src="la-metro-zips-2.geojson"></script> -->
+  <script src="HIN_bike.geojson"></script>
+  <script src="SCAG-zips.json"></script>
+
+
+  <script src="js/script.js"></script>
+  </body>
+</html>
+
+
+
