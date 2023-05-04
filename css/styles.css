@@ -110,11 +110,11 @@ a:visited {
     margin: 0px;
   }
 
-  .maptitle h3 a {
+  .title-desc p a {
     color: #99a0a5
   }
 
-  .maptitle h3 a:visited {
+  .title-desc p a:visited {
     color: #99a0a5
   }
 
